@@ -1,0 +1,68 @@
+
+# find 만들기
+# def myfind(string, substr, start=0, end=-1):
+#     if substr in string:
+#         if end == -1:
+#             end = len(string)
+#         for i in range(start, end):
+#             check = True
+#             for j in range(len(substr)):
+#                 if string[i+j] != substr[j]:
+#                     check = False
+#                     break
+#                 elif i+j >= end or i+j <= start:
+#                     check = False
+#                     break
+#             if check:
+#                 return i
+#
+#     return -1
+#
+# print(myfind("hello world", "wor",5,8))
+
+
+# def myreplace(string,old,new,count=-1):
+#     idx = 0
+#     result = ''
+#     if count == -1:
+#         count=len(string)
+#     while count != 0:
+#         if string[idx:idx+len(old)]==old:
+#             idx = idx+len(old)
+#             result += new
+#             count-=len(old)
+#
+#         elif string[idx:idx+len(old)]!= old:
+#             result += string[idx:idx+len(old)]
+#             idx += idx+len(old)
+#             count-=len(old)
+#
+#     return result
+#
+#
+# string="aaaaa"
+# print(myreplace(string,'a','b',3))
+
+# string=string.replace("a","b",3)
+# print(string)
+
+
+def make_apart(층,호):
+    apart = []
+    for i in range(1, 층 + 1):
+        for j in range(1,호+1):
+            print(f"i = {i}, j  = {j}")
+
+    return apart
+층 = int(input())
+호 = int(input())
+
+print(make_apart(층,호))
+# apartment = [['101호','102호'],
+#             ['201호','202호'],
+#             ['301호','302호']]
+apartment = make_apart(층,호)
+info = [['1명','3명'],['2명','0명'],['3명','6명']]
+# [[{'101호':1명},{'102호':3명}]
+#  [{'201호':2명},{'202호':0명}]
+#  [{'301호':3명},{'302호':6명}]]
